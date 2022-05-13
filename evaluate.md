@@ -13,7 +13,7 @@ installed.
 
 ## Building the Docker Image
 
-### ... with `make`
+### ... with `make` (perhaps `sudo make`)
 Run
  - `make` to build the container and execute the example workflow.
  - `make shell` to build and get a shell inside the container.
@@ -39,7 +39,9 @@ the `06-test` subfolder:
  - `workcell_results-h-0.log` should only contain "PASS" verdicts.
 
 ## Known Issues
-If the workflow exhibits errors, e.g. killed processes, please make
-sure the docker container has at least 4GB of memory available.  If
-you are using Docker Desktop on macOS or Windows you may need to
-increase the system resources in the Preferences page.
+ - If the workflow exhibits errors, e.g. killed processes, please make
+   sure the docker container has at least 4GB of memory available.  If
+   you are using Docker Desktop on macOS or Windows you may need to
+   increase the system resources in the Preferences page.
+ - On Ubuntu, you might need to make sure that the Docker daemon is 
+   active with `sudo systemctl start docker`.
