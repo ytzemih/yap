@@ -1,0 +1,11 @@
+version: "2"
+services:
+  supervisor-workflow:
+    build: .
+    container_name: supervisor-workflow
+    image: supervisor-workflow:latest
+    mem_limit: 8192M
+
+    volumes:
+      - ./files/:/root/files/:rw
+    restart: "no"
