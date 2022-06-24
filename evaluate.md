@@ -14,7 +14,7 @@ the built Docker image.
 
 ## Building the Docker Image
 
-### ... with `make`
+### ... with `make` (perhaps `sudo make`)
 Run
  - `make` to build the container and execute the example workflow.
  - `make shell` to build and get a shell inside the container.
@@ -41,7 +41,9 @@ the `06-test` subfolder:
  - `cat files/yap-examples/hrc2/06-tests/workcell_results-h-0.log`
    should only contain `PASS` verdicts.
 
-## Known Issues
+## Possible Issues with Docker
+ - On Ubuntu, you might need to make sure that the Docker daemon is 
+   active with `sudo systemctl start docker`.
  - If, for any reason, your Docker setup is [unable to access the
    Ubuntu package
    repositories](https://medium.com/@faithfulanere/solved-docker-build-could-not-resolve-archive-ubuntu-com-apt-get-fails-to-install-anything-9ea4dfdcdcf2),
@@ -51,3 +53,4 @@ the `06-test` subfolder:
    sure the docker container has **at least 4GB of memory** available.  If
    you are using Docker Desktop on macOS or Windows you may need to
    increase the system resources in the Preferences page.
+
